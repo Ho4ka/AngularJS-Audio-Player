@@ -1,0 +1,32 @@
+<div class=" control-wrapper">
+        <div ng-style="" class="playback-line">
+                <div ng-style="playerControls.playBackStyle" class="playback-line-time"></div>
+        </div>
+        <div class="author-name">{{ playerControls.songs[playerControls.currentSongIndex].name }}</div>
+
+        <div class="btn-wrapper">
+            <button class="btn btn-previous" ng-click="playerControls.previous() ">
+                    <ng-include class="svg" src="'./img/SVG/previous2.svg'"></ng-include>
+            </button>
+
+
+            <button class="btn btn-play" ng-click="playerControls.play()">
+                    <ng-include class="svg" src="'./img/SVG/play3.svg'"></ng-include>
+            </button>
+
+            <button class="btn btn-pause" ng-click="playerControls.stop()">
+                    <ng-include class="svg" src="'./img/SVG/pause2.svg'"></ng-include>
+            </button>
+
+            <button class="btn btn-next" ng-click="playerControls.next()">
+                    <ng-include class="svg" src="'./img/SVG/next2.svg'"></ng-include>
+            </button>
+        </div>
+
+        <audio id="audio" src="" ></audio>
+    <div class="repeat-mode-wrapper">
+        <input ng-model="playerControls.repeatMode" type="checkbox">
+        <span>repeat mode</span>
+
+    </div>
+</div>

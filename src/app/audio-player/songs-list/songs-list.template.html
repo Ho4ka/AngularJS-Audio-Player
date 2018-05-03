@@ -1,0 +1,7 @@
+
+  <!-- delete-song-callback передаємо функцію котра видаляє пісню з songsList в songItem -->
+<song-item 
+    ng-repeat="singleSong in songsList.songs"
+    song="singleSong"
+    delete-song-callback="songsList.deleteSong(songName)" 
+ ></song-item>

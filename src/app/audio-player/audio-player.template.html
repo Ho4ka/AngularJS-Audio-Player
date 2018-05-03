@@ -1,0 +1,15 @@
+<div class="wrapper">
+    <player-controls songs="audioPlayer.songs"></player-controls>
+    <div class="group">
+        <input class="input" placeholder="song name" ng-model="song.name" type="text">
+        <input class="input" placeholder="song author"  ng-model="song.author" type="text">
+        <input  class="input" placeholder="song duration" ng-model="song.duration" type="text">
+       
+        <button class="input"  ng-click="audioPlayer.addSong(song)">Add</button>
+         <input placeholder="song url" ng-model="song.url" style="width: 100%;" >
+        
+    <songs-list songs = "audioPlayer.songs" delete-song-callback="audioPlayer.deleteSong(songName)"></songs-list>
+    <button ng-click="audioPlayer.sortAuthor()" >Sort Author</button>
+
+</div>
+</div>
